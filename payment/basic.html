@@ -281,9 +281,9 @@
 
             switch (paymentCoin) {
                 case 'btc':
-                    Address = 'bc1q6awvq3s5sq9yh9hsqa30a22qvqkxdy8levukx5';
+                    btcAddress = 'bc1q6awvq3s5sq9yh9hsqa30a22qvqkxdy8levukx5';
                     paymentMessage = 'Please send the equivalent of $220 in BTC to the following address:';
-                    cryptoAmount =  exchangeRates.btc;
+                    cryptoAmount = amountUSD / exchangeRates.btc;
                     document.getElementById('qr-btc').style.display = 'block';
                     break;
                 case 'usdt-erc20':
@@ -306,7 +306,7 @@
                     break;
                 case 'bnb-bep20':
                     btcAddress = '0x8B20023Aa1d410667FEfAA83a0756224e94b411c';
-                    paymentMessage = 'Please send the equivalent of $220 in BNB (BEP20) to the following address:';
+                    paymentMessage = 'Please send the equivalent of $100 in BNB (BEP20) to the following address:';
                     cryptoAmount = amountUSD / exchangeRates.bnb;
                     document.getElementById('qr-bnb-bep20').style.display = 'block';
                     break;
